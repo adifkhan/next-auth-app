@@ -1,0 +1,23 @@
+.header {
+  background-color: var(--main-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 100px;
+  box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.navtittle {
+  color: var(--text-color);
+}
+.navlist {
+  display: flex;
+  gap: 15px;
+  list-style-type: none;
+  font-weight: bold;
+  font-size: medium;
+  cursor: pointer;
+}
+.links {
+  text-decoration: none;
+  color: white;
+}
