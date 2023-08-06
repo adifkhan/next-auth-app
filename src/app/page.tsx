@@ -3,10 +3,8 @@ import styles from './page.module.css';
 
 export default function Home() {
   return (
-    <main>
-      <div>
-        <h1>welcome to next auth app</h1>
-      </div>
+    <main className={styles.main}>
+      <h1>welcome to next auth</h1>
     </main>
   );
 }

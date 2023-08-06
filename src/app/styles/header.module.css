@@ -3,7 +3,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  align-items: center;
   padding: 10px 100px;
+  margin-bottom: 20px;
   box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .navtittle {
@@ -11,6 +13,7 @@
 }
 .navlist {
   display: flex;
+  align-items: center;
   gap: 15px;
   list-style-type: none;
   font-weight: bold;
@@ -20,4 +23,12 @@
 .links {
   text-decoration: none;
   color: white;
+}
+.submitbutton {
+  padding: 5px 10px;
+  font-size: medium;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
 }

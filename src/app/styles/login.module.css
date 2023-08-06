@@ -21,7 +21,7 @@
   padding: 8px;
   border-radius: 5px;
 }
-.button {
+.buttonbox {
   display: flex;
   justify-content: center;
   margin: 10px 0;
@@ -31,6 +31,7 @@
   font-size: medium;
   font-weight: bold;
   border-radius: 5px;
+  cursor: pointer;
 }
 .link {
   text-decoration: none;

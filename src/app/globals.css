@@ -14,3 +14,8 @@ body {
   --main-color: #5c8984;
   --text-color: white;
 }
+.errormessage {
+  text-align: center;
+  color: rgb(161, 5, 5);
+  margin: 2px 0;
+}
