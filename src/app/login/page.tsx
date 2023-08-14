@@ -28,7 +28,7 @@ const Login = () => {
     }
   };
   return (
-    <section className={styles.login}>
+    <section className={styles.container}>
       <h1 className={styles.heading}>Login</h1>
       <form onSubmit={onLogin}>
         <div className={styles.inputgroup}>
@@ -68,6 +68,7 @@ const Login = () => {
       <p>
         New to Next Auth?
         <Link href='/signup' className={styles.link}>
+          {'  '}
           Sign Up
         </Link>
       </p>

@@ -31,7 +31,7 @@ const SignUp = () => {
     }
   };
   return (
-    <section className={styles.signup}>
+    <section className={styles.container}>
       <h1 className={styles.heading}>Sign Up</h1>
       <form onSubmit={onSignUp}>
         <div className={styles.inputgroup}>
