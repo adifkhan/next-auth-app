@@ -1,0 +1,44 @@
+.container {
+  background-color: var(--main-color);
+  width: 400px;
+  margin: 30px auto 0;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.heading {
+  text-align: center;
+  margin-bottom: 10px;
+}
+.inputgroup {
+  display: flex;
+  gap: 5px;
+  flex-direction: column;
+  margin-bottom: 3px;
+}
+.inputfield {
+  font-size: medium;
+  padding: 8px;
+  border-radius: 5px;
+}
+.message {
+  color: rgb(133, 4, 4);
+  text-align: center;
+}
+.buttonbox {
+  display: flex;
+  justify-content: center;
+  margin: 10px 0;
+}
+.submitbutton {
+  padding: 10px 20px;
+  font-size: medium;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.link {
+  text-decoration: none;
+  color: #e9ffc2;
+  font-weight: bold;
+}

@@ -60,8 +60,13 @@ const Login = () => {
         </div>
       </form>
       <p className='errormessage'>{error}</p>
+      <p className={styles.linkarea}>
+        <Link href='/forgotpassword' className={styles.link}>
+          forgot password?
+        </Link>
+      </p>
       <p>
-        New to Next Auth?{' '}
+        New to Next Auth?
         <Link href='/signup' className={styles.link}>
           Sign Up
         </Link>

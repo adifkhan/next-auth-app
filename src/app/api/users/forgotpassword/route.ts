@@ -1,4 +1,5 @@
 import { connect } from '@/dbConfig/dbConfig';
+import { sendEmail } from '@/helpers/mailer';
 import User from '@/models/userModel';
 import { NextRequest, NextResponse } from 'next/server';
 
@@ -7,25 +8,19 @@ connect();
 export async function POST(request: NextRequest) {
   try {
     const reqBody = await request.json();
-    const { token } = reqBody;
+    const { email } = reqBody;
 
-    //find the user in database //
     const user = await User.findOne({
-      verifyToken: token,
-      verifyTokenExpiry: { $gt: Date.now() },
+      email: email,
     });
     if (!user) {
-      return NextResponse.json({ message: 'Invalid token', success: false });
+      return NextResponse.json({ message: 'Invalid user', success: false });
     }
-
-    //update user info //
-    user.isVerified = true;
-    user.verifyToken = undefined;
-    user.verifyTokenExpiry = undefined;
-    await user.save();
+    // sent verification email to user //
+    await sendEmail({ email, emailType: 'RESET', userId: user._id });
 
     return NextResponse.json({
-      message: 'Email varified successfully',
+      message: `a reset link has been sent to ${email}`,
       success: true,
     });
   } catch (error: any) {
