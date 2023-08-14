@@ -17,7 +17,7 @@ export async function connect() {
       process.exit();
     });
   } catch (error) {
-    console.log('something went wrong!');
+    console.log('something went wrong in dbConfig!');
     console.log(error);
   }
 }

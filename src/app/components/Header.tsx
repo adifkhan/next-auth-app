@@ -14,8 +14,6 @@ const Header = () => {
       const res = await axios.get('/api/users/auth');
       if (res.data.success) {
         setUser(res.data.user);
-      } else {
-        router.push('/login');
       }
     };
     getauth();
@@ -29,11 +27,14 @@ const Header = () => {
       console.log(error.message);
     }
   };
+  const isUser = Object.keys(user).length !== 0;
+
   return (
     <header className={styles.header}>
       <div>
         <h1 className={styles.navtittle}>NEXT AUTH</h1>
       </div>
+
       <nav>
         <ul className={styles.navlist}>
           <li>
@@ -46,7 +47,7 @@ const Header = () => {
               Profile
             </Link>
           </li>
-          {!user ? (
+          {!isUser ? (
             <li>
               <Link href='/login' className={styles.links}>
                 Login
